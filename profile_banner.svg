@@ -29,11 +29,10 @@
       opacity: 0.9;
       animation: fadein 3s ease 1s forwards;
     }
-    .branch {
-      fill: #6b21a8;
-      stroke: #4c1d95;
-      stroke-width: 2;
-      filter: url(#glow);
+    .circle-japan {
+      fill: #dc2626;
+      filter: drop-shadow(0 0 3px #b91c1c);
+      animation: pulse 3s ease-in-out infinite alternate;
     }
     .flower {
       fill: #f9a8d4;
@@ -54,6 +53,10 @@
       0% { opacity: 0.7; }
       100% { opacity: 1; }
     }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
   ]]></style>
 
   <!-- Background -->
@@ -65,19 +68,15 @@
     <text x="0" y="60" class="subtitle">Content-Based System with Python &amp; Pandas</text>
   </g>
 
-  <!-- Cherry Blossom Tree (simple branches and flowers) -->
-  <g transform="translate(780, 20)">
-    <!-- Branches -->
-    <rect x="20" y="50" width="10" height="80" class="branch" rx="3" ry="3" />
-    <rect x="10" y="90" width="10" height="40" class="branch" rx="2" ry="2" transform="rotate(-25 15 110)" />
-    <rect x="30" y="90" width="10" height="40" class="branch" rx="2" ry="2" transform="rotate(20 35 110)" />
-
-    <!-- Flowers -->
+  <!-- Japan Symbol: red circle with 5 small cherry blossoms -->
+  <g transform="translate(820, 95)">
+    <circle class="circle-japan" cx="0" cy="0" r="40" />
+    <!-- Flowers around the circle -->
+    <circle class="flower" cx="-45" cy="-10" r="8" />
+    <circle class="flower" cx="-25" cy="35" r="6" />
     <circle class="flower" cx="20" cy="40" r="7" />
-    <circle class="flower" cx="5" cy="85" r="6" />
-    <circle class="flower" cx="40" cy="85" r="6" />
-    <circle class="flower" cx="10" cy="130" r="5" />
-    <circle class="flower" cx="35" cy="130" r="5" />
+    <circle class="flower" cx="40" cy="-15" r="5" />
+    <circle class="flower" cx="5" cy="-40" r="6" />
   </g>
 
 </svg>
